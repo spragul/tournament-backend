@@ -21,5 +21,8 @@ app.use('/user',userRouter)
 app.use('/participant',participantRouter);
 app.use('/tournament',tournamentRouter);
 
+app.use('/',(req,res)=>{
+    res.send({message:"TournamentApp backEnd working"});
+})
 
 app.listen(process.env.PORT || '9000', () => (console.log("localhost:9000")))
