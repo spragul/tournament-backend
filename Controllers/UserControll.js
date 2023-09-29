@@ -32,7 +32,7 @@ exports.signup = async (req, res) => {
 //login 
 exports.login = async (req, res) => {
     try {
-
+        console.log(req.body.email,req.body.password)
         let user = await UserModel.findOne({ email: req.body.email });
         if (user) {
             timeExpires = '2h'
